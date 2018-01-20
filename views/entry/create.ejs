@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<style type="text/css">
+	.translations tr{
+		display: none;
+	}
+	
+	body{
+		  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #555555;
+	}
+	.texttitle {
+		align-content: center;
+		/*font-weight: 00;*/
+		align-items: center;
+		line-height: 30px;
+		padding: 10px;
+		color: #313741;
+		text-align: center;
+		resize: none;
+		box-decoration-break: unset;
+	}
+	.textbody {
+		align-content: center;
+		/*font-weight: 00;*/
+		align-items: center;
+		line-height: 30px;
+		padding: 10px;
+		color: #313741;
+		/*text-align: center;*/
+		resize: none;
+		font-size:1.4em; 
+		letter-spacing: 1px;
+	}
+	.translations{
+	  display: none;
+	}
+
+	.container a {
+	  text-decoration: none;
+	  padding: 10px 20px;
+	  background-color: #00AE4D;
+	  border-radius: 3px;
+	  color: #FFFFFF;
+	}
+
+	.container a:hover, .container table tr td button:hover {
+	  background-color: #ffd800;
+	  color: black;
+	}
+
+	textarea:focus {
+	/*background: #f3f7f8;*/
+	outline: none;
+	color:#000c2b;
+	border: 1px solid;
+	}
+
+	textarea {
+	resize:none ;
+	width: 100%;
+	}
+
+	input[type=submit]:hover {
+	background-color: #afafaf;
+	}
+	hr{
+		background: gray;
+		border: 0.5px solid #bfbfbf;
+	}
+
+
+
+</style>
+<body style="background:#f3f7f8 ;line-height: 6px;">
+
+
+
+
+<div style="padding-left:4%; ">
+<h1><a href="/entry/" style="color: black;text-decoration: ;padding-left:6%; ">All posts</a></h1>
+</div>
+<div align="center" class="conainer-fluid" style="padding-top: 4%;width: 101.3%;background:;margin: -8px; ">
+
+
+
+
+	<div style="background:white; width: 80%;border-radius: 5px;min-height: 700px; ">
+<div style="margin: -9px;">
+<button class="btn btn-info btn-sm color-gray" style="margin:0px 0px 0px 50%;border-radius: 0px 0px 2px 2px;background-color: #f3f7f8;border:none; padding: 2px 10px 3px 10px;color: black;top:-70px;">ARTICLTE</button>
+</div>
+
+<form action="/entry/save" method="post">
+				<textarea class="texttitle"  type="text" name="e1"  value="" style="margin-top: 60px;height: 40px;font-size:2em;border: none;width: 80%;" placeholder="Title" align="center" /></textarea>
+
+
+
+				<hr width="80%" style="background: #f3f7f8;color:#f3f7f8; ">
+				<br>
+				<br>
+				<br>
+
+				<textarea class="textbody" name="e4" style="font-size:1em;width: 80%;min-height: 300px;border:none;background: ;" placeholder="" align="center"></textarea>
+
+				<hr width="80%" style="margin-bottom: 90px; ">
+
+
+<table class="translations">
+	
+	<tbody>
+		
+		<tr >
+
+              <tr>
+            <td><span style="font-weight: 800;font-size: 0.7em;">Addfive</span></td>
+                          <td><input type="text" name="e5" /></td>
+                        </tr>
+            <tr>
+            <td><span style="font-weight: 800;font-size: 0.7em;">Addsix</span></td>
+                          <td><input type="text" name="e6" /></td>
+                        </tr>
+            <tr>  
+            <td><span style="font-weight: 800;font-size: 0.7em;">Addseven</span></td>
+                          <td><input type="text" name="e7" /></td>
+            </tr>
+
+              <tr>
+            <td><span style="font-weight: 800;font-size: 0.7em;">Chapter</span></td>
+              <td><input type="text" name="e2" /></td>
+            </tr>
+            <tr>
+              <td><span style="font-weight: 800;font-size: 0.7em;">Paragraph Number</span></td>
+              <td><input type="text" name="e3" /></td>
+            </tr>
+<tr>
+              <td><span style="">tr_sho</span></td>
+              <td><textarea name="lang_one"></textarea>
+            </td>
+
+          </tr>
+          <tr >
+              <td><span style="">tr_nde</span></td>
+              <td><textarea name="lang_two"></textarea>
+            </td>
+
+          </tr>
+          <tr >
+              <td><span style="">tr_tsw</span></td>
+              <td><textarea name="lang_three"></textarea>
+            </td>
+
+          </tr>
+          <tr >
+              <td><span style="">tr_afr</span></td>
+              <td><textarea name="lang_four"></textarea>
+            </td>
+
+          </tr>
+
+</tr>
+
+
+	</tbody>
+</table>
+
+
+            <tr>
+              <td colspan="2"><button type="submit">Save</button></td>
+            </tr>
+<!-- 											<div class="container" style="float: right;padding-right: 100px;">
+											<a href="/entry/create">Save</a>
+											</div> -->
+
+
+
+</form>
+
+	</div>
+		       
+
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
