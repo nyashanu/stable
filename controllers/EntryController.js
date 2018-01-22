@@ -31,7 +31,7 @@ entryController.list = function(req, res) {
       console.log("Error:", err);
     }
     else {
-      res.render("../views/Entry/index", {entry: entry});
+      res.render("../views/Entry/blank", {entry: entry});
     }
   });
 };
@@ -47,6 +47,27 @@ entryController.show = function(req, res) {
     }
   });
 };
+
+// > beta landing page
+
+// Show employee by id
+entryController.blank = function(req, res) {
+    Entry.find({}).exec(function (err, entry) {
+    if (err) {
+      console.log("Error:", err);
+    }
+    else {
+      res.render("../views/Entry/blank", {entry: entry});
+    }
+  });
+};
+
+
+// < beta landing page
+
+
+
+
 
 // Create new employee
 entryController.create = function(req, res) {

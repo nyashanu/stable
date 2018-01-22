@@ -7,6 +7,18 @@ router.get('/', function(req, res) {
   entry.list(req, res);
 });
 
+
+// > beta landing page
+
+router.get('/blank', function(req, res) {
+  entry.blank(req, res);
+});
+
+// < beta landing page
+
+
+
+
 // Get single employee by id
 router.get('/show/:id', function(req, res) {
   entry.show(req, res);
@@ -36,5 +48,9 @@ router.post('/update/:id', function(req, res) {
 router.post('/delete/:id', function(req, res, next) {
   entry.delete(req, res);
 });
+
+
+
+
 
 module.exports = router;
