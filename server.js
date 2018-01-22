@@ -50,9 +50,13 @@ app.use(express.static(__dirname + '/public'));
 ;''
 var configDB = require('./config/database.js');
 // local database
+// MongoClient.connect('mongodb://test:test@ds111138.mlab.com:11138/heroku_l2mzhqqg');
 mongoose.connect('mongodb://test:test@ds111138.mlab.com:11138/heroku_l2mzhqqg');
 // mongod --dbpath /Users/mac/Desktop/data
-// mongoose.connect('mongodb://localhost/loginapp')
+
+// var mongoclient = new MongoClient(new Server("localhost", 27017), {native_parser: true});
+
+mongoose.connect('mongodb://localhost/loginapp')
 require('./config/passport')(passport);
 
 app.use(morgan('dev'));
