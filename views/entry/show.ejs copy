@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/entry">Epleyee " object"</a></h3>
+      <h1>Employee Detail</h1>
+      <table>
+        <tbody>
+
+
+            <tr>
+            <td>Title</td>
+            <td>:</td>
+            <td><%= entry.e1 %></td>
+          </tr>
+
+            <tr>
+            <td>Chapter</td>
+            <td>:</td>
+            <td><%= entry.e2 %></td>
+          </tr>
+
+          <tr>
+            <td>Paragraph Number</td>
+            <td>:</td>
+            <td><%= entry.e3 %></td>
+          </tr>
+
+          <tr>
+            <td>Paragraph</td>
+            <td>:</td>
+            <td><%= entry.e4 %></td>
+          </tr>
+                    <tr>
+            <td>addfive</td>
+            <td>:</td>
+            <td><%= entry.e5 %></td>
+          </tr>
+                    <tr>
+            <td>addsix</td>
+            <td>:</td>
+            <td><%= entry.e6 %></td>
+          </tr>
+                    <tr>
+            <td>addseven</td>
+            <td>:</td>
+            <td><%= entry.e7 %></td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+
+      <table>
+        <tbody>
+
+        </tbody>
+      </table>
+
+
+
+      <h3><a href="/entry/edit/<%= entry._id%>">EDIT</a></h3>
+      <form action="/entry/delete/<%= entry._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>

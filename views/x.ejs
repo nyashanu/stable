@@ -1,0 +1,41 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>Choose method</title>
+	<link rel="stylesheet" href="ui_update/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<style>
+		body 		{ padding-top:80px; }
+	</style>
+</head>
+<body style="background: url(alpha/fresh.jpg);background-size:cover;color: white;background-position:0px 15%;  ">
+
+	<div align="center" style="padding-bottom:50px ; ">
+<img src="alpha/color_bg_lg.png" height="50px">
+</div>
+
+
+<div class="container" style="width: 30%;max-height: 200px;">
+
+	<div class="jumbotron text-center" align="center">
+		
+		<!-- <p>Login or Register with:</p> -->
+<br><br>
+
+		<a href="/login" class="btn btn-default" style="color: black;""><span class="fa fa-user" style="color: black;"></span> Login</a>
+
+<br><br>
+
+		<a href="/signup" class="btn btn-default" style="color: black;"><span class="fa fa-user" style="color: black;"></span> Signup</a>
+<br><br>
+
+		<a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
+<br><br>
+
+		<a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+	</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+
+<script src="/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/bootstrap.min.css" />
+
+<style type="text/css">
+	.translations tr{
+		display: none;
+	}
+	
+	body{
+		  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #555555;
+	}
+	.texttitle {
+		align-content: center;
+		/*font-weight: 00;*/
+		align-items: center;
+		line-height: 30px;
+		padding: 10px;
+		color: #313741;
+		text-align: center;
+		resize: none;
+		box-decoration-break: unset;
+	}
+	.textbody {
+		min-height: 3800px;
+		background: ;
+		padding:0px 4% 0px 4%  ;
+		line-height: 30px;
+		color: #000c2b;
+		font-weight: 100;
+		font-size: 0.9em;
+	}
+	.translations{
+	  display: none;
+	}
+
+	.container a {
+	  text-decoration: none;
+	  padding: 10px 20px;
+	  border:1px solid #00AE4D;
+	  border-radius: 3px;
+	  color: #00AE4D;
+	}
+
+	.container a:hover, .container table tr td button:hover {
+	  background-color: #00AE4D;
+	  color: white;
+	  border: none;
+	}
+	.delete a {
+	  text-decoration: none;
+	  padding: 10px 20px;
+	  background-color: #ffd800;
+	  border-radius: 3px;
+	  color: black;
+	  border: none;
+	}
+
+	.delete a:hover, .container table tr td button:hover {
+	  background-color: #ffd800;
+	  color: black;
+	  border: none;
+	}
+	.edit a {
+	  text-decoration: none;
+	  padding: 10px 20px;
+	  background-color:white;
+	  border-radius: 3px;
+	  color: black;
+	  border: none;
+	}
+
+	.edit a:hover, .container table tr td button:hover {
+	  background-color:white;
+	  color: gray;
+	}
+
+	textarea:focus {
+	background: #f3f7f8;
+	outline: none;
+	color:#000c2b;
+	border: 1px solid;
+	}
+
+	textarea {
+	resize:none ;
+	width: 100%;
+	}
+
+	input[type=submit]:hover {
+	background-color: #afafaf;
+	}
+	hr{
+		background: gray;
+		border: 0.5px solid #bfbfbf;
+	}
+	.para{
+		min-height: 380px;
+		background: ;
+		padding:0px 4% 0px 4%  ;
+		line-height: 30px;
+		color: #000c2b;
+		font-weight: 100;
+		font-size: 0.9em;
+	}
+	.lang{
+		min-height: 30px;
+		background: ;
+		padding:0px 0px 0px 5%  ;
+		line-height: 30px;
+		color: #000c2b;
+		font-weight: 100;
+		font-size: 0.9em;
+	}
+
+
+
+</style>
+<body style="background: #4a5960;line-height: 6px;">
+
+
+<div class="conainer-fluid" style="padding-top: 4%;width: 101.3%;background:;margin: -8px; ">
+
+
+<h3><a href="/entry/" style="color: white;text-decoration: ;padding-left:6%; ">All posts</a></h3>
+
+
+<br>
+
+	<div style="background:white; width: 90%;border-radius: 5px;min-height: 900px;margin: auto; ">
+<div style="margin-left: 40%;">
+<button class="btn btn-info btn-sm color-gray" style="margin:0px 0px 0px 50%;border-radius: 0px 0px 2px 2px;background-color: #f3f7f8;border:none; padding: 2px 10px 3px 10px;color: black;top:-70px;">ARTICLTE</button>
+</div>
+
+
+
+
+
+
+<h1 style="padding: 50px 0px 0px 4%;"> <%= entry.e1 %></h1>
+
+<br>
+
+						<div class="container" style="padding: 0px 150px 30px 0px;" align="right">
+
+
+						<!-- <a href="/entry/create" style="">Transalte</a> -->
+&nbsp
+<span class="delete">
+
+
+	      <form action="/entry/delete/<%= entry._id%>"  method="post">
+   <span class="edit"><a href="/entry/edit/<%= entry._id%>"  style="">edit ( original post )</a></span>
+
+
+
+        <button type="submit" class="btn" style="padding: 9px 14px 9px 14px ;border-radius: 3px;color: red;">DELETE</button>
+    </form>
+</span>&nbsp
+
+
+						</div>
+
+<hr width="95%">
+
+<div class="row">
+<div class="col-sm-6 lang" style="max-height:20px;">
+
+	<b> Original</b>
+</div>
+<div class="col-sm-6 lang" style="max-height:20px;">
+	<b> Shona</b>
+</div>
+</div>
+
+
+<br>
+<br>
+
+<div class="container-fluid">
+
+	<!-- > -->
+
+
+
+
+
+<div class="row">
+
+<form action="/entry/update/<%= entry._id%>" method="post">
+	<div class="col-sm-6 para" style="width:;">
+		
+
+
+		<p>
+
+
+		<%= entry.e4 %>
+
+
+		</p>
+
+
+
+	</div>
+	<div class="col-sm-6 para" style="width:;">
+		
+
+
+
+		<textarea class="textbody" name="lang_one" value="<%= entry.lang_one %>" style="font-size:1em;width: 100%;border:none;" placeholder="Add Translation" align="center"><%= entry.lang_one %></textarea>
+
+<button type="submit" class="btn-info"  style="border-radius: 3px;background: #00AE4D;right: 4%;bottom: 5%;position: fixed;">Update</button>
+
+		
+		
+<table class="translations">
+	
+	<tbody>
+		
+		
+
+<tr>
+
+
+<textarea  class="translations" name="e1" value="<%= entry.e1 %>" style="font-size:1em;width: 100%;border:none;" placeholder="Add Translation" align="center"><%= entry.e1 %></textarea>
+
+<textarea  class="translations" name="e2" value="<%= entry.e2 %>" style="font-size:1em;width: 100%;border:none;" placeholder="Add Translation" align="center"><%= entry.e2 %></textarea>
+
+<textarea  class="translations" name="e3" value="<%= entry.e3 %>" style="font-size:1em;width: 100%;border:none;" placeholder="Add Translation" align="center"><%= entry.e3 %></textarea>
+
+<textarea  class="translations" name="e4" value="<%= entry.e4 %>" style="font-size:1em;width: 100%;border:none;" placeholder="Add Translation" align="center"><%= entry.e4 %></textarea>
+
+<textarea  class="translations" name="e5" value="<%= entry.e5 %>" style="font-size:1em;width: 100%;border:none;" placeholder="Add Translation" align="center"><%= entry.e5 %></textarea>
+
+<textarea  class="translations" name="e6" value="<%= entry.e6 %>" style="font-size:1em;width: 100%;border:none;" placeholder="Add Translation" align="center"><%= entry.e6 %></textarea>
+
+<textarea  class="translations" name="e7" value="<%= entry.e7 %>" style="font-size:1em;width: 100%;border:none;" placeholder="Add Translation" align="center"><%= entry.e7 %></textarea>
+</tr>
+
+          <tr >
+              <td><span style="">tr_nde</span></td>
+              <td><textarea name="lang_two"></textarea>
+            </td>
+
+          </tr>
+          <tr >
+              <td><span style="">tr_tsw</span></td>
+              <td><textarea name="lang_three"></textarea>
+            </td>
+
+          </tr>
+          <tr >
+              <td><span style="">tr_afr</span></td>
+              <td><textarea name="lang_four"></textarea>
+            </td>
+
+          </tr>
+
+
+
+
+	</tbody>
+</table>
+		
+
+
+
+
+
+
+
+
+
+
+	</div>
+</form>
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- < -->
+<!-- > -->
+
+
+
+
+<!-- > -->
+
+
+
+
+	</div>
+		       
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
